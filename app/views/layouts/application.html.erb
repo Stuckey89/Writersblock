@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forum</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="navbar-fixed">
+      <nav class="blue darken-2">
+        <div class="nav-wrapper">
+                <div class="col middle">
+                  <body>
+          <% link_to "Writersblock", root_path, class: "brand-logo" %>
+          <ul class="right hide-on-med-and-down">
+          <% if user_logged_in? %>
+          <li><%= link_to "Sign out", sign_out_path %></li>
+          <% else %>
+          <li><a href="/auth/twitter">Sign in with Twitter</a></li>
+          <% end %>
+        </ul>
+      </div>
+      </div>
+    </nav>
+  </div>
+    <div class="container">
+    <%= yield %>
+  </body>
+</html>
