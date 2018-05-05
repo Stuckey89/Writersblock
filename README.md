@@ -8,6 +8,10 @@ Rails 5.2.0
 
 * rails new writersblock
 
-* bundle install
+* rails db:setup
+
+* rails db:migrate
+
+* rails generate scaffold Discussion headline:string content:text
 
 * rails server
